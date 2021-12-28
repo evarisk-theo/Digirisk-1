@@ -12,8 +12,5 @@ jobs:
               with:
                   fetch-depth: 0
             - name: Developper Documentation
-              uses: Evarisk/phpDOC@master
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
               run: cd ../../workflow/phpdocumentor/phpdocumentor && composer install && cd ../../bin && ./phpdoc -d "..\..\class" -t "..\..\docs"
 
