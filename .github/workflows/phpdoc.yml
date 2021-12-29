@@ -12,4 +12,4 @@ jobs:
               with:
                   fetch-depth: 0
             - name: Developper Documentation
-              run: cd shell/ci && ./phpdoc.sh
+              run: cd shell/ci && chmod +x ./phpdoc.sh && ./phpdoc.sh
