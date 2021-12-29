@@ -1,17 +1,15 @@
-#name: 'Code sniffer'
-#on:
-#  push:
-#    branches:
-#      - '*'         # matches every branch that doesn't contain a '/'
-#  master:
-#    name: 'build'
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#        with:
-#          fetch-depth: 0
-#
-#      - name: Run docs
-#        run: cd shell/ci && ./phpcs.sh
-#
-#
+name: 'PHP CS'
+on:
+    push:
+        branches:
+            - master
+jobs:
+    master:
+        name: 'build'
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@master
+              with:
+                  fetch-depth: 0
+            - name: PHPCS
+              run: cd workflow/bin && .phpcbf ../../admin && git add --all && git commit -m 'hey' && git push
