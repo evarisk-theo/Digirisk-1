@@ -12,5 +12,5 @@ jobs:
               with:
                   fetch-depth: 0
             - name: Developper Documentation
-              run: cd workflow/phpdocumentor/phpdocumentor && composer install && cd ../../bin && ./phpdoc -d "..\..\class" -t "..\..\docs"
-
+              run: cd shell/ci
+                   phpdoc.sh
