@@ -12,4 +12,4 @@ jobs:
               with:
                   fetch-depth: 0
             - name: PHPCS
-              run: cd workflow/bin && ./phpcbf ../../admin && git add --all && git commit -m 'hey' && git push
+              run: cd workflow/bin && sudo ./phpcbf ../../admin && git add --all && git commit -m 'hey' && git push
