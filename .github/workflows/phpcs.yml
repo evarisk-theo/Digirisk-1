@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Validate composer.json and composer.lock
-        run: composer validate
+        run: sudo composer validate
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: sudo composer install --prefer-dist --no-progress --no-suggest
 
       - name: Detecting PHP Code Standards Violations
-        run: composer run-script phpcs
+        run: sudo composer run-script phpcs
