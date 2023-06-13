@@ -1,5 +1,5 @@
 {
-  "name": "PHPCBF",
+  "name": "evarisk/github-actions-php-phpcs",
   "description": "Github Actions for PHP with PHP Code Sniffer",
   "autoload": {
     "classmap": [
