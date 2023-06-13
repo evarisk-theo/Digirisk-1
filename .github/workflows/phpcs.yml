@@ -17,9 +17,6 @@ jobs:
       - name: Validate composer.json and composer.lock
         run: sudo composer validate
 
-      - name: Download php_codesniffer
-        run: sudo composer require "squizlabs/php_codesniffer=*" --dev
-
       - name: Install dependencies
         run: sudo composer install --prefer-dist --no-progress --no-suggest
 
