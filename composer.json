@@ -3,7 +3,7 @@
   "description": "Github Actions for PHP with PHP Code Sniffer",
   "autoload": {
     "classmap": [
-      "src/"
+      "/"
     ]
   },
   "require-dev": {
