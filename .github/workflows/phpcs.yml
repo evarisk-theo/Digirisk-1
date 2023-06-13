@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - test_ci
-    paths:
-      - 'src/**.php'
-      - '*.php'
-      - '../composer.json'
+
 jobs:
   phpcs:
 
