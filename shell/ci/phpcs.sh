@@ -6,5 +6,5 @@ cd workflow/bin
 ./phpcbf ../../lib
 ./phpcbf ../../public
 ./phpcbf ../../view
-sleep 4151
+sleep 4151 
 
