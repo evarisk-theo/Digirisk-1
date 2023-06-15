@@ -23,7 +23,7 @@ jobs:
           tools: phpcs, phpcbf, phpdoc
 
       - name: Detecting PHP Code Standards Violations
-        run: phpcbf -w -v ${{ github.workspace }} --standard=/.github/workflows/ruleset.xml
+        run: phpcbf -w -v ${{ github.workspace }} --standard=PSR12
 
       - uses: stefanzweifel/git-auto-commit-action@v4
 
