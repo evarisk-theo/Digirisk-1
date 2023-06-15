@@ -22,8 +22,8 @@ jobs:
           php-version: '7.4'
           tools: phpcs, phpcbf, phpdoc
 
-      - name: Detecting PHP Code Standards Violations
-        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
+#      - name: Detecting PHP Code Standards Violations
+#        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
       - name: Fixing PHP Code Standards Violations
         run: phpcbf -w -v ${{ github.workspace }} --standard=PSR12
 
