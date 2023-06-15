@@ -7,23 +7,26 @@ on:
       - "phpcs.xml"
       - ".github/workflows/phpcs.yml"
 
+
 jobs:
   phpcs:
     runs-on: ubuntu-latest
     steps:
-      - uses: ge-tracker/phpcbf-action@v1
+      - uses: actions/checkout@v2
         with:
-          php_cbf_args: './'
-          phpcs_standard: 'WordPress'
+          fetch-depth: 0 # important!
 
-#      - name: Setup PHP
-#        uses: shivammathur/setup-php@v2
-#        with:
-#          php-version: '7.4'
-#          tools: phpcs, phpcbf, phpdoc
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: phpcs, phpcbf, phpdoc
 
-#      - name: Detecting PHP Code Standards Violations
-#        run: phpcbf -w -v ./
+      - name: Detecting PHP Code Standards Violations
+        run: phpcbf -w -v --standard=ruleset.xml ./
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+
 #
 #      - name: Running phpdoc
 #        run: phpdoc -d
