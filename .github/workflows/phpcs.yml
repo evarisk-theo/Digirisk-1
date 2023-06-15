@@ -15,5 +15,11 @@ jobs:
         with:
           fetch-depth: 0 # important!
 
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: cs2pr, phpcs
+
       - name: Detecting PHP Code Standards Violations
         run: sudo ./vendor/bin/phpcbf -h
