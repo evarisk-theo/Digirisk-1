@@ -26,7 +26,7 @@ jobs:
 #        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
 
       - name: Show current dir
-        run: pwd
+        run: ls
 
       - name: Fixing PHP Code Standards Violations
         run: phpcbf -w ${{ github.workspace }} --standard=PSR12 --severity=8 ./class
