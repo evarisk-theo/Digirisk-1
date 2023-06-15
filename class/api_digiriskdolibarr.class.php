@@ -170,6 +170,6 @@ class DigiriskDolibarr extends DolibarrApi
 	 */
 	public function uploadNewModule()
 	{
-		return exec('cd ../custom/digiriskdolibarr/shell/pull && bash update_version.sh');
+		return exec( 'cd ../custom/digiriskdolibarr/shell/pull && bash update_version.sh'  );
 	}
 }
