@@ -22,4 +22,4 @@ jobs:
           tools: phpcs
 
       - name: Detecting PHP Code Standards Violations
-        run: phpcs -q ./
+        run: shell/ci/phpcs.sh
