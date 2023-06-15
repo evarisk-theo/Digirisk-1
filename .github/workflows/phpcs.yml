@@ -19,7 +19,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          tools: phpcs
+          tools: phpcs, phpdoc
 
       - name: Detecting PHP Code Standards Violations
-        run: sudo shell/ci/phpcs.sh
+        run: phpcbf -q ./
+
+      - name: Running phpdoc
+        run: phpdoc -d "..\..\class" -t "..\..\docs"
