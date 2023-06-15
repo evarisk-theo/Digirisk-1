@@ -25,7 +25,7 @@ jobs:
 #      - name: Detecting PHP Code Standards Violations
 #        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
       - name: Fixing PHP Code Standards Violations
-        run: ./vendor/bin/php-cs-fixer fix --diff --allow-risky=yes
+        run: php-cs-fixer fix --diff --allow-risky=yes
 
       - uses: stefanzweifel/git-auto-commit-action@v4
 
