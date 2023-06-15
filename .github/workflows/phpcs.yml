@@ -20,4 +20,4 @@ jobs:
         run: sudo composer install
 
       - name: Detecting PHP Code Standards Violations
-        run: sudo composer run-script phpcbf
+        run: sudo ./vendor/bin/phpcbf -h
