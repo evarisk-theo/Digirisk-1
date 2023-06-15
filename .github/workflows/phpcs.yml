@@ -29,7 +29,7 @@ jobs:
         run: ls
 
       - name: Fixing PHP Code Standards Violations
-        run: phpcbf -w --standard=PSR12 --severity=8 ./class
+        run: sudo phpcbf -w --standard=PSR12 --severity=8 ./class
 
       - name: Fixing PHP Code Standards Violations
         run:  git status
