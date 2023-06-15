@@ -19,7 +19,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          tools: cs2pr, phpcs
+          tools: phpcs
 
       - name: Detecting PHP Code Standards Violations
-        run: phpcs -q --report=checkstyle src | cs2pr
+        run: phpcs -q ./
