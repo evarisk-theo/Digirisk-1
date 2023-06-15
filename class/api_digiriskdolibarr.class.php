@@ -132,11 +132,11 @@ class DigiriskDolibarr extends DolibarrApi
 	 *
 	 * @throws 	RestException
 	 */
-	public function getActiveVersion()
+	public function getActiveVersion( )
 	{
 		global $conf;
 
-		return $conf->global->DIGIRISKDOLIBARR_VERSION;
+		return  $conf->global->DIGIRISKDOLIBARR_VERSION;
 	}
 
 	/**
