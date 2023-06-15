@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: ge-tracker/phpcbf-action@v1
+        with:
+          php_cbf_args: './'
+          phpcs_standard: 'WordPress'
 
 #      - name: Setup PHP
 #        uses: shivammathur/setup-php@v2
