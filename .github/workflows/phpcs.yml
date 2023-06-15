@@ -20,12 +20,12 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          tools: phpcs, phpcbf, phpdoc, php-cs-fixer
+          tools: phpcs, phpcbf, phpdoc
 
 #      - name: Detecting PHP Code Standards Violations
 #        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
       - name: Fixing PHP Code Standards Violations
-        run: php-cs-fixer fix --diff --allow-risky=yes
+        run: phpcbf -w -v ${{ github.workspace }} --standard=PSR12 --severity=8 && git diff
 
       - uses: stefanzweifel/git-auto-commit-action@v4
 
