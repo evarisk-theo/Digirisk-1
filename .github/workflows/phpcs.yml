@@ -22,7 +22,7 @@ jobs:
           tools: phpcs, phpcbf, phpdoc
 
       - name: Detecting PHP Code Standards Violations
-        run: phpcbf -q ./
+        run: phpcbf ./
 
       - name: Running phpdoc
         run: phpdoc -d "..\..\class" -t "..\..\docs"
