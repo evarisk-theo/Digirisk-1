@@ -22,4 +22,4 @@ jobs:
           tools: cs2pr, phpcs
 
       - name: Detecting PHP Code Standards Violations
-        run: sudo ./vendor/bin/phpcbf -h
+        run: phpcs -q --report=checkstyle src | cs2pr
