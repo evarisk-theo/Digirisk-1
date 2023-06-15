@@ -28,6 +28,9 @@ jobs:
       - name: Show current dir
         run: ls
 
+      - name: Searching for PHP Code Standards Violations
+        run: sudo phpcs --standard=PSR12 --severity=8 ./class
+
       - name: Fixing PHP Code Standards Violations
         run: sudo phpcbf -w --standard=PSR12 --severity=8 ./class
 
