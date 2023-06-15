@@ -19,11 +19,11 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.0'
+          php-version: '7.4'
           tools: phpcs, phpcbf, phpdoc
 
       - name: Detecting PHP Code Standards Violations
-        run: phpcbf -w -v ${{ github.workspace }} --standard=PSR12
+        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
 
       - uses: stefanzweifel/git-auto-commit-action@v4
 
