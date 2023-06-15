@@ -32,7 +32,7 @@ jobs:
         run: sudo phpcs --standard=PSR12 --severity=8 ./class
 
       - name: Fixing PHP Code Standards Violations
-        run: sudo phpcbf -v -w --standard=PSR12 --severity=3 ./class
+        run: sudo phpcbf -v -w --standard=PSR12 --severity=4 ./class
 
       - name: Fixing PHP Code Standards Violations
         run:  git status
