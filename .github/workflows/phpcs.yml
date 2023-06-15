@@ -19,7 +19,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '7.0'
           tools: phpcs, phpcbf, phpdoc
 
       - name: Detecting PHP Code Standards Violations
