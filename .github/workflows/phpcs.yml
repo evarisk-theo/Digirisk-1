@@ -20,7 +20,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
-          tools: phpcs, phpcbf@3.0.0, phpdoc
+          tools: phpcs, phpcbf, phpdoc
 
 #      - name: Detecting PHP Code Standards Violations
 #        run: phpcs -w -v ${{ github.workspace }} --standard=PSR12
