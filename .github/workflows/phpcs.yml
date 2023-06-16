@@ -33,7 +33,7 @@ jobs:
 
       - name: Fixing PHP Code Standards Violations
         run: |
-          sudo phpcbf -v -w --standard=PSR12 --severity=6 ./class
+          sudo phpcbf -v -w --standard=PSR12 --severity=2 ./class
           git diff
 
 #      - name: Fixing PHP Code Standards Violations
